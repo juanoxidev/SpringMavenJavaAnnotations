@@ -8,7 +8,7 @@ public class testAnnotations {
 		// leer el XML de configuracion
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
 		// pedir un bean al contenedor con javaAnnotation
-		Empleado Juan = contexto.getBean("Comercial", Empleado.class);
+		Empleado Juan = contexto.getBean("comercial", Empleado.class);
 		// usar el bean 
 		System.out.println(Juan.getInforme());
 		System.out.println(Juan.getTareas());
