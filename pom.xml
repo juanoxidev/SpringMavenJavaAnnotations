@@ -84,4 +84,27 @@
     <version>2.2.2</version>
 </dependency>
 	</dependencies>
+	
+	<!--Crea la carpeta librerias donde se guardan los archivos jar de las dependencias-->
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>                      
+                            <outputDirectory>${project.build.directory}/librerias</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
